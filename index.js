@@ -96,11 +96,12 @@ app.post('/api/users/', (req, res) => {
     !body.email ||
     !body.gender ||
     !body.job_title
-  )
-    users.push({ ...body, id: users.length + 1 });
+  ) {
+    return res.status(400).json({ msg: 'all fields are req...' });
+  }
+  users.push({ ...body, id: users.length + 1 });
   fs.writeFile('./MOCK_DATA.json', JSON.stringify(users), (err, data) => {
-    // return res.status(201).json({ status: 'success', id: users.length });
-    return res.status(400).json({ msg: 'All fields are req...' });
+    return res.status(201).json({ status: 'success', id: users.length });
   });
   //console.log('body', body);
 });
