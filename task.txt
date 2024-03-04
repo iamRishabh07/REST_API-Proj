@@ -1,0 +1,22 @@
+REST API - JSON
+
+Server should be hybrid 
+GET /users - HTML Doc render SSR
+
+
+These are all CSR 
+
+GET /api/users - List all users JSON - Done
+
+GET /api/users/1 - Get the user with ID 1 - Done
+GET /api/users/2 - Get the user with ID 2 - Done
+
+POST/api/users - Create a new user
+
+PATCH /api/users/1 - edit the user with ID 1
+
+DELETE /api/users/1 - Delete the user with ID 1
+
+Dynamic Path Parameters
+GET /api/users/:id
+:id - variable/ dynamic
